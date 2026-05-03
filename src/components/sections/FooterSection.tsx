@@ -72,11 +72,15 @@ const FooterSection = () => {
       </div>
 
       {/* Hello Kitty bow SVG */}
-      <div className="mt-16 opacity-40">
-        <svg width="40" height="28" viewBox="0 0 40 28" fill="none">
-          <ellipse cx="10" cy="14" rx="10" ry="12" fill="hsl(350,89%,42.7%)" />
-          <ellipse cx="30" cy="14" rx="10" ry="12" fill="hsl(350,89%,42.7%)" />
-          <circle cx="20" cy="14" r="5" fill="hsl(350,89%,42.7%)" />
+      <div className="mt-16 opacity-50">
+        <svg width="60" height="36" viewBox="0 0 60 36" fill="none">
+          {/* Left loop */}
+          <path d="M30 18 C30 18, 28 6, 18 4 C8 2, 2 10, 4 18 C6 26, 16 28, 30 18Z" fill="#c8102e" />
+          {/* Right loop */}
+          <path d="M30 18 C30 18, 32 6, 42 4 C52 2, 58 10, 56 18 C54 26, 44 28, 30 18Z" fill="#c8102e" />
+          {/* Center knot */}
+          <circle cx="30" cy="18" r="5" fill="#c8102e" />
+          <circle cx="30" cy="18" r="3" fill="#a00d24" />
         </svg>
       </div>
     </section>

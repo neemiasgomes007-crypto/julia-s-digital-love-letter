@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+import hkPink from "@/assets/hk-pink.jpg";
 
 const IntroSection = () => {
   const [showSubtext, setShowSubtext] = useState(false);
   const title = "Bem-vinda à minha mente, Júlia.";
+  const chars = Array.from(title);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowSubtext(true), 1500);
+    const timer = setTimeout(() => setShowSubtext(true), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -23,10 +25,10 @@ const IntroSection = () => {
       <div className="relative z-10 text-center max-w-lg mx-auto">
         {/* Letter by letter title */}
         <h1
-          className="text-2xl md:text-4xl italic mb-10"
+          className="text-2xl md:text-4xl italic mb-8"
           style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
-          {title.split("").map((char, i) => (
+          {chars.map((char, i) => (
             <span
               key={i}
               className="inline-block"
@@ -41,12 +43,12 @@ const IntroSection = () => {
           ))}
         </h1>
 
-        {/* Spotify embed */}
+        {/* Spotify embed - compact */}
         <div className="spotify-embed mb-6">
           <iframe
             src="https://open.spotify.com/embed/track/2p8IUWQDrpjuFltbdgLOag?utm_source=generator&theme=0"
             width="100%"
-            height="152"
+            height="80"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
@@ -56,7 +58,7 @@ const IntroSection = () => {
 
         {/* Subtext */}
         <p
-          className="text-sm italic transition-opacity duration-1000"
+          className="text-sm italic transition-opacity duration-1000 mb-8"
           style={{
             color: "hsl(var(--muted-foreground))",
             opacity: showSubtext ? 1 : 0,
@@ -65,9 +67,26 @@ const IntroSection = () => {
           Aperte o play e preste atenção.
         </p>
 
+        {/* Julia's selfie with bear filter */}
+        <div className="flex justify-center mb-8">
+          <div
+            className="relative rounded-full overflow-hidden w-28 h-28 md:w-36 md:h-36"
+            style={{
+              boxShadow: "0 0 20px hsl(350 89% 42.7% / 0.5), 0 0 40px hsl(350 89% 42.7% / 0.3)",
+              animation: "glow-pulse 3s ease-in-out infinite",
+              border: "3px solid hsl(350, 89%, 42.7%)",
+            }}
+          >
+            <img
+              src={hkPink}
+              alt="Julia"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
         {/* Scroll indicator */}
         <div
-          className="mt-16"
           style={{ animation: "bounce-down 2s ease-in-out infinite" }}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="mx-auto">
