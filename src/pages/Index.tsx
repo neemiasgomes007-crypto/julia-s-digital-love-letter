@@ -1,16 +1,53 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import Particles from "@/components/Particles";
+import CustomCursor from "@/components/CustomCursor";
+import IntroSection from "@/components/sections/IntroSection";
+import DeclarationSection from "@/components/sections/DeclarationSection";
+import ArquivoRosaSection from "@/components/sections/ArquivoRosaSection";
+import ObraDeArteSection from "@/components/sections/ObraDeArteSection";
+import HelloKittySection from "@/components/sections/HelloKittySection";
+import FrequenciaSection from "@/components/sections/FrequenciaSection";
+import FooterSection from "@/components/sections/FooterSection";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useScrollReveal();
+
+  useEffect(() => {
+    // Re-run scroll reveal after all images load
+    const handleLoad = () => {
+      document.querySelectorAll(".reveal").forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.85) {
+          el.classList.add("visible");
+        }
+      });
+    };
+    window.addEventListener("load", handleLoad);
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="relative min-h-screen bg-background">
+      {/* Noise overlay */}
+      <div className="noise-overlay" />
+
+      {/* Floating particles */}
+      <Particles count={18} />
+
+      {/* Custom cursor */}
+      <CustomCursor />
+
+      {/* Sections */}
+      <IntroSection />
+      <DeclarationSection />
+      <ArquivoRosaSection />
+      <ObraDeArteSection />
+      <HelloKittySection />
+      <FrequenciaSection />
+      <FooterSection />
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
