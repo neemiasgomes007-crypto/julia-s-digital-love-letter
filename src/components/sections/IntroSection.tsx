@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import hkPink from "@/assets/hk-pink.jpg";
+import juliaBear from "@/assets/julia-bear.jpg";
 
 const IntroSection = () => {
   const [showSubtext, setShowSubtext] = useState(false);
@@ -78,7 +78,7 @@ const IntroSection = () => {
             }}
           >
             <img
-              src={hkPink}
+              src={juliaBear}
               alt="Julia"
               className="w-full h-full object-cover"
             />

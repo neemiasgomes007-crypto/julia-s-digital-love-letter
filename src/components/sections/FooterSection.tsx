@@ -63,6 +63,24 @@ const FooterSection = () => {
         >
           Feito com amor. Só pra você. Só porque você merece.
         </p>
+
+        {/* Birthday message */}
+        <p
+          className="text-2xl md:text-3xl italic mt-6 mb-2"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            color: "hsl(var(--tribute-red))",
+          }}
+        >
+          Feliz Aniversário, Júlia 🖤
+        </p>
+        <p
+          className="text-sm tracking-[0.3em] uppercase mb-4"
+          style={{ color: "hsl(var(--tribute-rose))" }}
+        >
+          07 . 05
+        </p>
+
         <p
           className="text-sm tracking-widest mt-6"
           style={{ color: "hsl(var(--muted-foreground))" }}

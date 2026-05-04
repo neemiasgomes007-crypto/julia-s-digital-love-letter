@@ -6,6 +6,7 @@ import IntroSection from "@/components/sections/IntroSection";
 import DeclarationSection from "@/components/sections/DeclarationSection";
 import ArquivoRosaSection from "@/components/sections/ArquivoRosaSection";
 import ObraDeArteSection from "@/components/sections/ObraDeArteSection";
+import VideoGallerySection from "@/components/sections/VideoGallerySection";
 import HelloKittySection from "@/components/sections/HelloKittySection";
 import FrequenciaSection from "@/components/sections/FrequenciaSection";
 import FooterSection from "@/components/sections/FooterSection";
@@ -43,6 +44,7 @@ const Index = () => {
       <DeclarationSection />
       <ArquivoRosaSection />
       <ObraDeArteSection />
+      <VideoGallerySection />
       <HelloKittySection />
       <FrequenciaSection />
       <FooterSection />
