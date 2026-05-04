@@ -1,21 +1,21 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Particles from "@/components/Particles";
 import CustomCursor from "@/components/CustomCursor";
+import WelcomeScreen from "@/components/sections/WelcomeScreen";
 import IntroSection from "@/components/sections/IntroSection";
 import DeclarationSection from "@/components/sections/DeclarationSection";
 import ArquivoRosaSection from "@/components/sections/ArquivoRosaSection";
 import ObraDeArteSection from "@/components/sections/ObraDeArteSection";
-import VideoGallerySection from "@/components/sections/VideoGallerySection";
 import HelloKittySection from "@/components/sections/HelloKittySection";
 import FrequenciaSection from "@/components/sections/FrequenciaSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const Index = () => {
+  const [entered, setEntered] = useState(false);
   useScrollReveal();
 
   useEffect(() => {
-    // Re-run scroll reveal after all images load
     const handleLoad = () => {
       document.querySelectorAll(".reveal").forEach((el) => {
         const rect = el.getBoundingClientRect();
@@ -30,6 +30,9 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen bg-background">
+      {/* Welcome screen */}
+      <WelcomeScreen onEnter={() => setEntered(true)} />
+
       {/* Noise overlay */}
       <div className="noise-overlay" />
 
@@ -44,7 +47,6 @@ const Index = () => {
       <DeclarationSection />
       <ArquivoRosaSection />
       <ObraDeArteSection />
-      <VideoGallerySection />
       <HelloKittySection />
       <FrequenciaSection />
       <FooterSection />

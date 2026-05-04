@@ -12,7 +12,7 @@ const IntroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 red-glow-bottom overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-10 red-glow-bottom overflow-hidden">
       {/* Heartbeat background glow */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -22,10 +22,10 @@ const IntroSection = () => {
         }}
       />
 
-      <div className="relative z-10 text-center max-w-lg mx-auto">
+      <div className="relative z-10 text-center max-w-md mx-auto w-full px-2">
         {/* Letter by letter title */}
         <h1
-          className="text-2xl md:text-4xl italic mb-8"
+          className="text-xl sm:text-2xl md:text-4xl italic mb-6 md:mb-8"
           style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
           {chars.map((char, i) => (
@@ -43,10 +43,10 @@ const IntroSection = () => {
           ))}
         </h1>
 
-        {/* Spotify embed - compact */}
-        <div className="spotify-embed mb-6">
+        {/* Spotify embed - Die For You by The Weeknd */}
+        <div className="spotify-embed mb-4 md:mb-6">
           <iframe
-            src="https://open.spotify.com/embed/track/2p8IUWQDrpjuFltbdgLOag?utm_source=generator&theme=0"
+            src="https://open.spotify.com/embed/track/05RRxLSg0rJikDPBcNOHiF?utm_source=generator&theme=0"
             width="100%"
             height="80"
             frameBorder="0"
@@ -58,7 +58,7 @@ const IntroSection = () => {
 
         {/* Subtext */}
         <p
-          className="text-sm italic transition-opacity duration-1000 mb-8"
+          className="text-xs sm:text-sm italic transition-opacity duration-1000 mb-6 md:mb-8"
           style={{
             color: "hsl(var(--muted-foreground))",
             opacity: showSubtext ? 1 : 0,
@@ -68,9 +68,9 @@ const IntroSection = () => {
         </p>
 
         {/* Julia's selfie with bear filter */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-4">
           <div
-            className="relative rounded-full overflow-hidden w-28 h-28 md:w-36 md:h-36"
+            className="relative rounded-full overflow-hidden w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36"
             style={{
               boxShadow: "0 0 20px hsl(350 89% 42.7% / 0.5), 0 0 40px hsl(350 89% 42.7% / 0.3)",
               animation: "glow-pulse 3s ease-in-out infinite",
@@ -85,10 +85,19 @@ const IntroSection = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div
-          style={{ animation: "bounce-down 2s ease-in-out infinite" }}
+        {/* Cute compliment */}
+        <p
+          className="text-sm sm:text-base italic mb-6 md:mb-8"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            color: "hsl(var(--tribute-rose))",
+          }}
         >
+          A garota mais linda que eu já vi na vida. 🤍
+        </p>
+
+        {/* Scroll indicator */}
+        <div style={{ animation: "bounce-down 2s ease-in-out infinite" }}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="mx-auto">
             <path d="M6 9l6 6 6-6" stroke="hsl(350, 89%, 42.7%)" strokeWidth="2" strokeLinecap="round" />
           </svg>
