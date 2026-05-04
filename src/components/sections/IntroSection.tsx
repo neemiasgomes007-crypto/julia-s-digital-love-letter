@@ -78,7 +78,7 @@ const IntroSection = () => {
             }}
           >
             <img
-              src={hkPink}
+              src={juliaBear}
               alt="Julia"
               className="w-full h-full object-cover"
             />
