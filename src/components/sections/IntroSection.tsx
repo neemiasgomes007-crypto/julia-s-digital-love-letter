@@ -1,15 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import juliaBear from "@/assets/julia-bear.jpg";
 
 const IntroSection = () => {
   const [showSubtext, setShowSubtext] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const title = "Bem-vinda à minha mente, Júlia.";
   const chars = Array.from(title);
 
   useEffect(() => {
+    audioRef.current = new Audio("/audio/die-for-you.mp3");
+    audioRef.current.loop = true;
     const timer = setTimeout(() => setShowSubtext(true), 2000);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      audioRef.current?.pause();
+    };
   }, []);
+
+  const togglePlay = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-10 red-glow-bottom overflow-hidden">
