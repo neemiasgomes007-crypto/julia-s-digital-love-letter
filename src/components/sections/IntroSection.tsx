@@ -46,7 +46,7 @@ const IntroSection = () => {
         {/* Spotify embed - Die For You by The Weeknd */}
         <div className="spotify-embed mb-4 md:mb-6">
           <iframe
-            src="https://open.spotify.com/embed/track/05RRxLSg0rJikDPBcNOHiF?utm_source=generator&theme=0"
+            src="https://open.spotify.com/embed/track/3c0Oel2XkGU3NkagplFpSS?utm_source=generator&theme=0"
             width="100%"
             height="80"
             frameBorder="0"
