@@ -43,18 +43,39 @@ const IntroSection = () => {
           ))}
         </h1>
 
-        {/* Spotify embed - Die For You by The Weeknd */}
-        <div className="spotify-embed mb-4 md:mb-6">
-          <iframe
-            src="https://open.spotify.com/embed/track/2Ch7LmS7r2Gy2kc64wv3Bz?utm_source=generator&theme=0"
-            width="100%"
-            height="80"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            style={{ borderRadius: "12px" }}
-          />
-        </div>
+        {/* Die For You - custom minimal player */}
+        <a
+          href="https://open.spotify.com/track/2Ch7LmS7r2Gy2kc64wv3Bz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 mx-auto mb-4 md:mb-6 px-5 py-3 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 group"
+          style={{
+            background: "hsl(350 89% 42.7% / 0.12)",
+            border: "1px solid hsl(350 89% 42.7% / 0.3)",
+            maxWidth: "260px",
+          }}
+        >
+          {/* Play icon */}
+          <div
+            className="flex items-center justify-center w-9 h-9 rounded-full shrink-0 transition-colors duration-300"
+            style={{
+              background: "hsl(var(--tribute-red))",
+            }}
+          >
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+              <path d="M2 1.5L12.5 8L2 14.5V1.5Z" fill="hsl(var(--tribute-offwhite))" />
+            </svg>
+          </div>
+          {/* Song info */}
+          <div className="text-left">
+            <p className="text-xs sm:text-sm font-medium" style={{ color: "hsl(var(--tribute-offwhite))" }}>
+              Die For You
+            </p>
+            <p className="text-[10px] sm:text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>
+              The Weeknd
+            </p>
+          </div>
+        </a>
 
         {/* Subtext */}
         <p
