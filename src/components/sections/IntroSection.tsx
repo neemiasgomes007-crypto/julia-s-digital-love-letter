@@ -1,15 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import juliaBear from "@/assets/julia-bear.jpg";
 
 const IntroSection = () => {
   const [showSubtext, setShowSubtext] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const title = "Bem-vinda à minha mente, Júlia.";
   const chars = Array.from(title);
 
   useEffect(() => {
+    audioRef.current = new Audio("/audio/die-for-you.mp3");
+    audioRef.current.loop = true;
     const timer = setTimeout(() => setShowSubtext(true), 2000);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      audioRef.current?.pause();
+    };
   }, []);
+
+  const togglePlay = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-10 red-glow-bottom overflow-hidden">
@@ -43,28 +60,31 @@ const IntroSection = () => {
           ))}
         </h1>
 
-        {/* Die For You - custom minimal player */}
-        <a
-          href="https://open.spotify.com/track/2Ch7LmS7r2Gy2kc64wv3Bz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-3 mx-auto mb-4 md:mb-6 px-5 py-3 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 group"
+        {/* Die For You - play/pause button */}
+        <button
+          onClick={togglePlay}
+          className="flex items-center gap-3 mx-auto mb-4 md:mb-6 px-5 py-3 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
           style={{
             background: "hsl(350 89% 42.7% / 0.12)",
             border: "1px solid hsl(350 89% 42.7% / 0.3)",
             maxWidth: "260px",
           }}
         >
-          {/* Play icon */}
+          {/* Play/Pause icon */}
           <div
-            className="flex items-center justify-center w-9 h-9 rounded-full shrink-0 transition-colors duration-300"
-            style={{
-              background: "hsl(var(--tribute-red))",
-            }}
+            className="flex items-center justify-center w-9 h-9 rounded-full shrink-0"
+            style={{ background: "hsl(var(--tribute-red))" }}
           >
-            <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
-              <path d="M2 1.5L12.5 8L2 14.5V1.5Z" fill="hsl(var(--tribute-offwhite))" />
-            </svg>
+            {isPlaying ? (
+              <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+                <rect x="1" y="1" width="3" height="12" rx="1" fill="hsl(var(--tribute-offwhite))" />
+                <rect x="8" y="1" width="3" height="12" rx="1" fill="hsl(var(--tribute-offwhite))" />
+              </svg>
+            ) : (
+              <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+                <path d="M2 1.5L12.5 8L2 14.5V1.5Z" fill="hsl(var(--tribute-offwhite))" />
+              </svg>
+            )}
           </div>
           {/* Song info */}
           <div className="text-left">
@@ -75,7 +95,7 @@ const IntroSection = () => {
               The Weeknd
             </p>
           </div>
-        </a>
+        </button>
 
         {/* Subtext */}
         <p
