@@ -1,7 +1,7 @@
 const lines = [
-  "Nossa história tem uma vibe diferente. Um Drake romance com a profundidade melancólica de uma letra do The Weeknd.",
-  "A verdade, Júlia, é que não importa a distância. Mesmo quando a gente não se vê, mesmo quando a rotina tenta fazer barulho, você não sai dos meus pensamentos nem por um segundo.",
-  "Eu decorei os seus detalhes porque você se tornou a minha obsessão mais bonita e saudável.",
+  "A nossa amizade tem uma vibe diferente. Uma conexão com a profundidade de uma letra do The Weeknd.",
+  "A verdade, Júlia, é que não importa a distância. Mesmo quando a gente não se vê, mesmo quando a rotina tenta fazer barulho, você tá sempre nos meus pensamentos.",
+  "Eu decorei os seus detalhes porque você se tornou a pessoa mais especial da minha vida.",
 ];
 
 const FrequenciaSection = () => {
@@ -33,7 +33,7 @@ const FrequenciaSection = () => {
             color: "hsl(0, 0%, 100%)",
           }}
         >
-          Esse site é apenas uma prova digital de algo que o meu coração já registrou: você é a minha melhor descoberta.
+          Esse site é apenas uma prova digital de algo que o meu coração já registrou: você é a minha melhor descoberta, a amizade mais valiosa que eu tenho.
         </p>
 
         <p

@@ -2,8 +2,8 @@ const DeclarationSection = () => {
   const lines = [
     "Existe um universo inteiro que acontece na minha cabeça toda vez que eu olho para você.",
     "Um mundo pintado nas suas cores favoritas, em preto e vermelho, onde você é a única protagonista.",
-    "Eu sempre fui um observador, mas você...",
-    "você se tornou o meu foco absoluto.",
+    "Eu sempre fui um cara reservado, mas você...",
+    "você se tornou a pessoa que mais me chama a atenção.",
   ];
 
   return (

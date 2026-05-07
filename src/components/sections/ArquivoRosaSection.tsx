@@ -32,7 +32,7 @@ const ArquivoRosaSection = () => {
               O Início do Caos Bonito
             </h2>
             <p className="reveal text-base md:text-lg leading-relaxed" style={{ color: "hsl(var(--tribute-offwhite))" }}>
-              Se alguém me dissesse que essa garotinha de rosa, com os braços pro alto e um olhar tão puro, se tornaria a mulher que domina cada um dos meus pensamentos, eu não acreditaria. O mundo ainda não sabia, mas você já estava se preparando para virar a minha vida de cabeça para baixo. A essência inocente sempre esteve aí, apenas aguardando o momento certo para cruzar o meu caminho.
+              Se alguém me dissesse que essa garotinha de rosa, com os braços pro alto e um olhar tão puro, se tornaria a pessoa mais especial da minha vida, eu não acreditaria. O mundo ainda não sabia, mas você já estava se preparando para cruzar o meu caminho e mudar tudo. A essência inocente sempre esteve aí, esperando o momento certo pra gente se conhecer.
             </p>
           </div>
         </div>

@@ -21,12 +21,12 @@ const ObraDeArteSection = () => {
           A Obra de Arte em Movimento
         </h2>
         <p className="reveal text-base md:text-lg leading-relaxed mb-8" style={{ color: "hsl(var(--tribute-offwhite))" }}>
-          Eu amo observar você. Amo ver você em frente ao espelho, ajeitando a blusa do Stranger Things, arrumando os cachos com a perfeição de quem sabe o poder absurdo que tem. Eu reparo em cada detalhe, desde o cuidado com a sua fitagem até o momento em que você se olha e sorri.
+          Eu adoro observar você. Adoro ver você arrumando os cachos, ajeitando a blusa do Stranger Things com aquela atitude de quem sabe o poder absurdo que tem. Eu reparo em cada detalhe, no cuidado com a sua fitagem, no jeito que você se olha e sorri.
         </p>
         <p className="reveal text-lg md:text-xl leading-relaxed" style={{ color: "hsl(var(--tribute-offwhite))" }}>
           {highlightWords(
-            "Você tem essa confiança que me fascina e me enlouquece ao mesmo tempo. Aquele desejo quase agressivo de te prender na cabeceira da cama, só para deixar bem claro: sou eu quem está no controle. No controle de te amar, de te proteger, e de garantir que você seja a mulher mais realizada do mundo.",
-            ["fascina", "enlouquece", "controle", "te amar"]
+            "Você tem essa confiança que me fascina e me encanta ao mesmo tempo. Essa energia que ilumina qualquer lugar. Eu quero estar por perto, te ver brilhar, e garantir que você sempre saiba o quanto é incrível.",
+            ["fascina", "encanta", "ilumina", "incrível"]
           )}
         </p>
 

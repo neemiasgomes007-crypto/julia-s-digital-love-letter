@@ -61,7 +61,7 @@ const FooterSection = () => {
             color: "hsl(var(--tribute-offwhite))",
           }}
         >
-          Feito com amor. Só pra você. Só porque você merece.
+          Feito com carinho. Só pra você. Só porque você merece.
         </p>
 
         {/* Birthday message */}
