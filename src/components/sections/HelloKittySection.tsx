@@ -54,10 +54,10 @@ const HelloKittySection = () => {
               O Protocolo Hello Kitty
             </h2>
             <p className="reveal text-base md:text-lg leading-relaxed mb-4" style={{ color: "hsl(var(--tribute-offwhite))" }}>
-              E então, no meio de toda essa intensidade quase perigosa, você me desarma completamente. Você aparece com um filtro fofo, faz um biquinho e traz uma doçura que me quebra por inteiro.
+              E então, no meio de toda essa atitude, você me desarma completamente. Aparece com um filtro fofo, faz um biquinho e traz uma doçura que me quebra por inteiro.
             </p>
             <p className="reveal text-base md:text-lg leading-relaxed" style={{ color: "hsl(var(--tribute-offwhite))" }}>
-              É o meu contraste favorito no mundo inteiro. A garota adorável que rouba o meu sorriso mais sincero e a mulher intensa que me tira o fôlego sem precisar dizer uma palavra.
+              É o meu contraste favorito no mundo inteiro. A garota adorável que rouba o meu sorriso mais sincero e a mina forte que me impressiona sem precisar dizer uma palavra.
             </p>
 
             {/* Floating tags */}
